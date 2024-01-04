@@ -22,7 +22,7 @@ import { prepareExecutable } from "./util/javaServerStarter";
 
 const LIBERTY_CLIENT_ID = "LANGUAGE_ID_LIBERTY";
 const JAKARTA_CLIENT_ID = "LANGUAGE_ID_JAKARTA";
-export const LIBERTY_LS_JAR = "liberty-langserver-2.1.1-jar-with-dependencies.jar";
+export const LIBERTY_LS_JAR = "liberty-langserver-2.1.2-SNAPSHOT-jar-with-dependencies.jar";
 export const JAKARTA_LS_JAR = "org.eclipse.lsp4jakarta.ls-0.2.0-jar-with-dependencies.jar";
 
 let libertyClient: LanguageClient;
@@ -57,7 +57,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 
     resolveRequirements(api).then(requirements => {
         startLangServer(context, requirements, true).then(() => {
-            console.log("Liberty client ready, registering commands");
+            console.log("SKSK - Liberty client ready, registering commands");
     
             item.text = localize("liberty.ls.thumbs.up");
             item.tooltip = localize("liberty.ls.started");
